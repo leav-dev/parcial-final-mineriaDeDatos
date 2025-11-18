@@ -114,36 +114,6 @@ Toma capturas de:
 
 ---
 
-## 🌐 PASO 6: Desplegar en la Nube (OPCIONAL +1 punto)
-
-### Opción A: Render.com (RECOMENDADO)
-
-1. Crea cuenta en [render.com](https://render.com)
-2. Conecta tu repositorio de GitHub
-3. Crea un "Web Service"
-4. Configuración:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app:server --bind 0.0.0.0:$PORT`
-5. Añade esta línea al final de `app.py`:
-   ```python
-   server = app.server  # Añadir esta línea antes del if __name__
-   ```
-
-### Opción B: Railway.app
-
-1. Crea cuenta en [railway.app](https://railway.app)
-2. Sube tu proyecto desde GitHub
-3. Railway detectará automáticamente que es Python
-4. Configura el comando: `python app.py`
-
-### Opción C: Streamlit Cloud (si cambias a Streamlit)
-
-1. Sube a GitHub
-2. Conecta en [streamlit.io/cloud](https://streamlit.io/cloud)
-3. Deploy automático
-
----
-
 ## ❓ SOLUCIÓN DE PROBLEMAS
 
 ### Error: "ModuleNotFoundError"
@@ -163,69 +133,5 @@ Verifica que tu CSV tenga columna `cilindrada` o `cc`
 ### No aparece la tabla de ciudades
 Verifica que tu CSV tenga columna `ciudad`
 
-### El modelo no entrena
-Verifica que tengas columnas numéricas y una columna de ventas/cantidad
 
----
 
-## 📝 CHECKLIST PARA ENTREGA
-
-- [ ] Código en repositorio público (GitHub/Drive)
-- [ ] README.md completo con nombres de integrantes
-- [ ] requirements.txt con todas las dependencias
-- [ ] app.py funcionando correctamente
-- [ ] Dataset incluido en carpeta `data/`
-- [ ] PDF tutorial con:
-  - [ ] Nombres de todos los integrantes
-  - [ ] Explicación del código comentado
-  - [ ] Capturas de pantalla de cada funcionalidad
-  - [ ] Explicación de gráficos y métricas
-  - [ ] (Opcional) Link de aplicación desplegada
-- [ ] Notebook de análisis exploratorio (opcional pero recomendado)
-
----
-
-## 🎓 CRITERIOS DE EVALUACIÓN
-
-| Criterio | Puntos | ¿Cumple? |
-|----------|--------|----------|
-| Limpieza de datos (loc, iloc, nulos) | 20% | ⬜ |
-| EDA con gráficos variados | 20% | ⬜ |
-| Modelo ML entrenado y evaluado | 25% | ⬜ |
-| Dashboard funcional con Dash | 25% | ⬜ |
-| Documentación y código comentado | 10% | ⬜ |
-| **Bonus**: Deploy en la nube | +1 punto | ⬜ |
-
----
-
-## 💡 TIPS PARA OBTENER MÁXIMA CALIFICACIÓN
-
-1. **Comenta tu código**: Explica qué hace cada función
-2. **Gráficos variados**: Usa al menos 5 tipos diferentes
-3. **Análisis profundo**: No solo muestres gráficos, interpreta los resultados
-4. **PDF detallado**: Incluye explicaciones, no solo código
-5. **Prueba todo**: Asegúrate que funcione antes de entregar
-6. **Deploy**: El +1 punto puede marcar la diferencia
-
----
-
-## 📞 SOPORTE
-
-Si tienes problemas:
-1. Revisa los mensajes de error en la consola
-2. Verifica que instalaste todas las dependencias
-3. Confirma que el CSV tiene el formato correcto
-4. Lee la documentación de Dash: [dash.plotly.com](https://dash.plotly.com)
-
----
-
-## 🎉 ¡LISTO!
-
-Ahora tienes todo lo necesario para completar el proyecto exitosamente.
-
-**Recuerda**: 
-- Grupos de 4 personas: calificación sobre 5.0
-- Grupos de 5 personas: calificación sobre 4.0
-- Grupos de 6 personas: calificación sobre 3.5
-
-¡Buena suerte! 🍀
